@@ -16,6 +16,7 @@ function Get-ComputerSysInfoPipe{
             $ComputerName = $_
         }
 
+        #for each single computer found. Do this!
         foreach ($computer in $ComputerName){
             Get-WmiObject -Class win32_computersystem -ComputerName $computer |
                 Select-Object -Property Name, Manufacturer, Model
@@ -25,4 +26,6 @@ function Get-ComputerSysInfoPipe{
     END{}
 }
 
-Get-ComputerSysInfoPipe -ComputerName localhost
+#WORKS: Get-ComputerSysInfoPipe -ComputerName localhost
+    # although a little slower FYI
+Get-Content D:\Projects\PowershellPlayGround\Fundamentals\Files\localServer.txt | Get-ComputerSysInfoPipe
