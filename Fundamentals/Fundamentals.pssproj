@@ -33,6 +33,7 @@
     <Compile Include="BasicFunctionsFiltersPipelineFilters.ps1" />
     <Compile Include="Get-CompSysInfoFilter.ps1" />
     <Compile Include="Get-CompSysInfoPipeline.ps1" />
+    <Compile Include="Get-DiskInfo.ps1" />
     <Compile Include="LoopingConstructs.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
